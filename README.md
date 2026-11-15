@@ -1,309 +1,44 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ravi Raushan Kumar - Profile Overview</title>
-  <style>
-    body {
-      background-color: #ffffff;
-      color: #000000;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      line-height: 1.6;
-      margin: 0;
-      padding: 24px;
-      display: flex;
-      justify-content: center;
-    }
+# Hi, I'm Ravi Raushan Kumar
 
-    .profile-box {
-      max-width: 780px;
-      width: 100%;
-      background: #ffffff;
-      border: 1px solid #d0d7de;
-      border-radius: 8px;
-      padding: 24px 28px;
-      position: relative;
-    }
-
-    .controls {
-      position: absolute;
-      top: 16px;
-      right: 16px;
-      display: flex;
-      gap: 8px;
-    }
-
-    button {
-      background: #ffffff;
-      color: #000000;
-      border: 1px solid #d0d7de;
-      border-radius: 5px;
-      padding: 4px 10px;
-      font-size: 12px;
-      cursor: pointer;
-    }
-
-    button:hover {
-      background: #f6f8fa;
-    }
-
-    h1 {
-      font-size: 1.6rem;
-      margin: 0 0 4px 0;
-    }
-
-    .subtitle {
-      font-weight: 600;
-      color: #333333;
-      margin: 0 0 18px 0;
-    }
-
-    h3 {
-      font-size: 1.15rem;
-      margin: 18px 0 8px 0;
-      border-bottom: 1px solid #eaecef;
-      padding-bottom: 4px;
-    }
-
-    p {
-      margin: 6px 0;
-    }
-
-    ul {
-      margin: 6px 0 12px 20px;
-      padding: 0;
-    }
-
-    li {
-      margin: 4px 0;
-    }
-
-    a {
-      color: #0969da;
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    .footer-note {
-      margin-top: 18px;
-      font-weight: 600;
-    }
-
-    /* Blinking black marker/cursor */
-    .cursor {
-      display: inline-block;
-      width: 2px;
-      height: 1.1em;
-      background-color: #000000;
-      vertical-align: text-bottom;
-      margin-left: 2px;
-      animation: blink 0.8s step-end infinite;
-    }
-
-    @keyframes blink {
-      0%, 100% { opacity: 1; }
-      50% { opacity: 0; }
-    }
-  </style>
-</head>
-<body>
-
-  <div class="profile-box">
-    <div class="controls">
-      <button onclick="skipAnimation()">Skip</button>
-      <button onclick="startTyping()">Replay</button>
-    </div>
-    <div id="content"></div>
-  </div>
-
-  <script>
-    const blocks = [
-      { tag: "h1", text: "Hi, I'm Ravi Raushan Kumar " },
-      { tag: "p", className: "subtitle", text: "AI/ML Engineer | Generative AI Developer | Data Analyst" },
-
-      
-      { tag: "h3", text: "What I Have Done?" },
-      { tag: "p", text: "I have completed my M.Sc. in Mathematics & Computing from IIT (ISM) Dhanbad." },
-      { tag: "p", text: "I worked as a Data Analyst Intern at Bluestock Fintech, focusing on financial data analysis, data processing, and developing interactive Power BI dashboards." },
-      { tag: "p", text: "I worked as an AI Data Analyst Intern at InAmigos Foundation, developing Python-based data-cleaning and data-quality validation workflows." },
-      { tag: "p", text: "I developed RRK Voice Bot, an AI-powered voice and text assistant using FastAPI, LangGraph, LLMs, and Retrieval-Augmented Generation (RAG)." },
-      { tag: "p", text: "I built the Nifty 100 Financial Intelligence Platform, an analytics solution for evaluating companies through financial data, performance metrics, and financial ratios." },
-      { tag: "p", text: "I co-authored TriFusion-X, a research paper presenting a multimodal framework for detecting AI-generated text using statistical, semantic, and stylometric features." },
+**AI/ML Engineer | Generative AI Developer | Data Analyst**
 
 
-      { tag: "h3", text: "What Am I Currently Doing?" },
-      {
-        tag: "ul",
-        items: [
-          "Exploring Generative AI and Agentic AI.",
-          "Building AI-powered applications using LLMs and AI agents.",
-          "Developing RAG-based applications and intelligent assistants.",
-          "Working on Machine Learning, NLP, and Data Analytics projects.",
-          "Improving my skills in AI application development and deployment.",
-          "I teach and mentor students in Mathematics, Robotics, Programming, and Artificial Intelligence, helping them develop strong conceptual foundations, computational thinking, and practical problem-solving skills." 
+## What I Have Done?
 
-        ]
-      },
+- I have completed my M.Sc. in Mathematics & Computing from IIT (ISM) Dhanbad.
+- I worked as a Data Analyst Intern at Bluestock Fintech, focusing on financial data analysis, data processing, and developing interactive Power BI dashboards.
+- I worked as an AI Data Analyst Intern at InAmigos Foundation, developing Python-based data-cleaning and data-quality validation workflows.
+- I developed RRK Voice Bot, an AI-powered voice and text assistant using FastAPI, LangGraph, LLMs, and Retrieval-Augmented Generation (RAG).
+- I built the Nifty 100 Financial Intelligence Platform, an analytics solution for evaluating companies through financial data, performance metrics, and financial ratios.
+- I co-authored TriFusion-X, a research paper presenting a multimodal framework for detecting AI-generated text using statistical, semantic, and stylometric features.
 
-      { tag: "h3", text: " Tools & Technologies I Use" },
-      { tag: "p", boldPrefix: "Programming: ", text: "Python, SQL, C++" },
-      { tag: "p", boldPrefix: "Generative AI: ", text: "LLMs, RAG, LangChain, LangGraph, OpenAI API, OpenRouter, Whisper, Prompt Engineering" },
-      { tag: "p", boldPrefix: "Machine Learning: ", text: "Scikit-learn, TensorFlow, Keras, PyTorch, NLP, BERT" },
-      { tag: "p", boldPrefix: "Data Analytics: ", text: "Power BI, Excel, Pandas, NumPy, Matplotlib" },
-      { tag: "p", boldPrefix: "Databases: ", text: "MySQL, SQLite, ChromaDB" },
-      { tag: "p", boldPrefix: "Development & Deployment: ", text: "FastAPI, Streamlit, Docker, Git, GitHub, DVC, AWS" },
+## What Am I Currently Doing?
 
-      { tag: "h3", text: " How to Reach Me?" },
-      {
-        tag: "ul",
-        items: [
-          { prefix: "GitHub: ", linkText: "RRK-007-2002", href: "https://github.com/RRK-007-2002" },
-          { prefix: "LinkedIn: ", linkText: "Ravi Raushan Kumar", href: "https://www.linkedin.com/in/ravi-raushan-kumar-6202507390rrk" },
-          { prefix: "Email: ", linkText: "raviraushankr45@gmail.com", href: "mailto:raviraushankr45@gmail.com" }
-        ]
-      },
+- Exploring Generative AI and Agentic AI.
+- Building AI-powered applications using LLMs and AI agents.
+- Developing RAG-based applications and intelligent assistants.
+- Working on Machine Learning, NLP, and Data Analytics projects.
+- Improving my skills in AI application development and deployment.
+- I teach and mentor students in Mathematics, Robotics, Programming, and Artificial Intelligence, helping them develop strong conceptual foundations, computational thinking, and practical problem-solving skills.
 
-      { tag: "p", className: "footer-note", text: "Always learning, building, and exploring new possibilities in AI and Data Science." }
-    ];
+## Tools & Technologies I Use.
 
-    const container = document.getElementById("content");
-    const cursor = document.createElement("span");
-    cursor.className = "cursor";
 
-    let timer = null;
-    let isSkipped = false;
+| Area | Tools |
+|---|---|
+| **Programming** | Python, SQL, C++ |
+| **Generative AI** | LLMs, RAG, LangChain, LangGraph, OpenAI API, OpenRouter, Whisper, Prompt Engineering |
+| **Machine Learning** | Scikit-learn, TensorFlow, Keras, PyTorch, NLP, BERT |
+| **Data Analytics** | Power BI, Excel, Pandas, NumPy, Matplotlib |
+| **Databases** | MySQL, SQLite, ChromaDB |
+| **Development & Deployment** | FastAPI, Streamlit, Docker, Git, GitHub, DVC, AWS |
 
-    // Safely split emojis (like  and ) so they don't break while typing
-    const segmenter = typeof Intl !== "undefined" && Intl.Segmenter
-      ? new Intl.Segmenter("en", { granularity: "grapheme" })
-      : null;
+## How to Reach Me?
 
-    function splitChars(str) {
-      return segmenter
-        ? Array.from(segmenter.segment(str), s => s.segment)
-        : Array.from(str);
-    }
 
-    function sleep(ms) {
-      return new Promise(resolve => {
-        timer = setTimeout(resolve, ms);
-      });
-    }
+- **GitHub:** [RRK-007-2002](https://github.com/RRK-007-2002)
+- **LinkedIn:** [Ravi Raushan Kumar](https://www.linkedin.com/in/ravi-raushan-kumar-6202507390rrk)
+- **Email:** [raviraushankr45@gmail.com](mailto:raviraushankr45@gmail.com)
 
-    async function typeText(parentEl, text) {
-      const chars = splitChars(text);
-      const textNode = document.createTextNode("");
-      parentEl.appendChild(textNode);
-      parentEl.appendChild(cursor);
 
-      for (const ch of chars) {
-        if (isSkipped) return;
-        textNode.nodeValue += ch;
-        let delay = 10 + Math.random() * 10; // Normal typing speed
-        if ([".", ",", ":", "?"].includes(ch)) delay += 1; // Longer pause after punctuation
-        await sleep(delay);
-        
-      }
-    }
-
-    async function runAnimation() {
-      container.innerHTML = "";
-      isSkipped = false;
-
-      for (const block of blocks) {
-        if (isSkipped) return;
-
-        if (block.tag === "ul") {
-          const ul = document.createElement("ul");
-          container.appendChild(ul);
-
-          for (const item of block.items) {
-            if (isSkipped) return;
-            const li = document.createElement("li");
-            ul.appendChild(li);
-
-            if (typeof item === "string") {
-              await typeText(li, item);
-            } else {
-              await typeText(li, item.prefix);
-              if (item.href) {
-                const a = document.createElement("a");
-                a.href = item.href;
-                a.target = "_blank";
-                li.appendChild(a);
-                await typeText(a, item.linkText);
-              } else {
-                await typeText(li, item.text);
-              }
-            }
-          }
-        } else {
-          const el = document.createElement(block.tag);
-          if (block.className) el.className = block.className;
-          container.appendChild(el);
-
-          if (block.boldPrefix) {
-            const strong = document.createElement("strong");
-            el.appendChild(strong);
-            await typeText(strong, block.boldPrefix);
-          }
-
-          await typeText(el, block.text);
-          await sleep(140); // Brief pause between lines/sections
-        }
-      }
-    }
-
-    function skipAnimation() {
-      isSkipped = true;
-      clearTimeout(timer);
-      container.innerHTML = "";
-
-      for (const block of blocks) {
-        if (block.tag === "ul") {
-          const ul = document.createElement("ul");
-          block.items.forEach(item => {
-            const li = document.createElement("li");
-            if (typeof item === "string") {
-              li.textContent = item;
-            } else if (item.href) {
-              li.appendChild(document.createTextNode(item.prefix));
-              const a = document.createElement("a");
-              a.href = item.href;
-              a.target = "_blank";
-              a.textContent = item.linkText;
-              li.appendChild(a);
-            } else {
-              li.textContent = item.prefix + item.text;
-            }
-            ul.appendChild(li);
-          });
-          container.appendChild(ul);
-        } else {
-          const el = document.createElement(block.tag);
-          if (block.className) el.className = block.className;
-          if (block.boldPrefix) {
-            const strong = document.createElement("strong");
-            strong.textContent = block.boldPrefix;
-            el.appendChild(strong);
-          }
-          el.appendChild(document.createTextNode(block.text));
-          container.appendChild(el);
-        }
-      }
-      container.lastElementChild.appendChild(cursor);
-    }
-
-    function startTyping() {
-      clearTimeout(timer);
-      runAnimation();
-    }
-
-    startTyping();
-  </script>
-</body>
-</html>
+**Always learning, building, and exploring new possibilities in AI and Data Science.**
